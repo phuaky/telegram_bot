@@ -4,7 +4,7 @@ require 'logger'
 
 logger = Logger.new(STDOUT, Logger::DEBUG)
 
-bot = TelegramBot.new(token: 'YOUR KEY GOES HERE', logger: logger)
+bot = TelegramBot.new(token: '268208257:AAEkv6H5Cd_95-34Tnu57GZsyWPm1h6_7Jg', logger: logger)
 logger.debug "starting telegram bot"
 
 bot.get_updates(fail_silently: true) do |message|
@@ -14,7 +14,7 @@ bot.get_updates(fail_silently: true) do |message|
   message.reply do |reply|
     case command
     when /greet/i
-      reply.text = "Hello, #{message.from.first_name}!"
+      reply.text = "eh hello #{message.from.first_name}! So when you free ah?"
     else
       reply.text = "#{message.from.first_name}, have no idea what #{command.inspect} means."
     end
